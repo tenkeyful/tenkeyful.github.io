@@ -1,11 +1,168 @@
----
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+import { getCollection } from "astro:content";
+
+const essays = await getCollection("essays");
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="my cringey blog" />
+    <title>bien pensant</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <a href="/" class="header-logo">bien pensant</a>
+      <p>my cringey blog</p>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <section class="essays">
+        <ol>
+          {essays.map((essay, i) => (
+            <li>
+              <span class="ol-number">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <a href={`/essays/${essay.id}/`}>
+                {essay.data.title}
+              </a>
+            </li>
+          ))}
+        </ol>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-links">
+        <a
+          href="https://github.com/tenkeyful"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+            alt=""
+            class="contact"
+          />
+        </a>
+
+        <a
+          href="mailto:contact@bienpensant.com"
+          aria-label="Contact by email"
+          style="color: var(--text-color); font-size: 24px; text-decoration: none;"
+        >
+          @
+        </a>
+      </div>
+
+      <p>Why an old-school blog?</p>
+    </footer>
+  </body>
+</html>
+
+<style>
+  /* Body */
+  :root {
+    --background: #ffffff;
+    --text-color: #000000;
+    --subtext-color: #808080;
+    --accent: AccentColor;
+  }
+
+  ::selection {
+    background: var(--text-color);
+    color: var(--background);
+  }
+
+  body {
+    margin: 0;
+    padding: 50px 5%;
+    background: var(--background);
+    color: var(--text-color);
+  }
+
+  /* Subtext */
+  p {
+    font-family: monospace;
+    font-size: 13px;
+    color: var(--subtext-color);
+  }
+
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-logo {
+    color: var(--text-color);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    text-decoration: none;
+  }
+
+  /* Essays */
+  ol {
+    padding: 0;
+    list-style: none;
+  }
+
+  .ol-number {
+    font-family: monospace;
+    letter-spacing: 1px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 0;
+    border-bottom: 1px dashed var(--subtext-color);
+    color: var(--subtext-color);
+  }
+
+  li a {
+    flex: 1;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    color: var(--text-color);
+    text-decoration: none;
+  }
+
+  li a:hover {
+    color: var(--subtext-color);
+  }
+
+  /* Footer */
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer-links a:hover {
+    opacity: 0.5;
+  }
+
+  .contact {
+    display: block;
+    width: 25px;
+    height: 25px;
+  }
+</style>
