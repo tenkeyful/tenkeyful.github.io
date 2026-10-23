@@ -1,0 +1,123 @@
+---
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+	const articles = await getCollection("articles");
+
+	return articles.map((article) => ({
+		params: { slug: article.id },
+		props: { article },
+	}));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+---
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content={article.data.description} />
+		<title>{article.data.title} - bien pensant</title>
+	</head>
+
+	<body>
+		<header>
+			<a href="/" class="header-logo">bien pensant</a>
+		</header>
+
+		<main>
+			<section>
+				<div id="article-title">{article.data.title}</div>
+				<div id="article-description">{article.data.description}</div>
+			</section>
+			<Content />
+		</main>
+	</body>
+</html>
+
+<style>
+	/* Body */
+	:root {
+		--soft-background: #f6f8fa;
+		--text-color: #000000;
+		--subtext-color: #808080;
+		--accent: AccentColor;
+	}
+
+	::selection {
+		background: var(--text-color);
+		color: #ffffff;
+	}
+
+	body {
+		margin: 0;
+		padding: 50px 5%;
+		color: var(--text-color);
+		font-family: Segoe UI;
+	}
+
+	/* Header */
+	.header-logo {
+		display: flex;
+		justify-content: center;
+		color: inherit;
+		font-family: Georgia, "Times New Roman", serif;
+		font-size: 24px;
+		text-decoration: none;
+	}
+
+	.header-logo:hover {
+		color: var(--subtext-color);
+	}
+
+	/* Main */
+	main {
+		max-width: 750px;
+		margin: 50px auto;
+		line-height: 1.75;
+	}
+
+	section {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 0px;
+	}
+
+	#article-title {
+		font-family: Georgia, "Times New Roman", serif;
+		font-size: 15px;
+		color: var(--text-color);
+	}
+
+	#article-description {
+		font-family: monospace;
+		font-size: 13px;
+		color: var(--subtext-color);
+	}
+
+	:global(pre.astro-code) {
+		background-color: var(--soft-background) !important;
+		border: 1px solid var(--soft-background);
+		border-radius: 6px;
+		padding: 16px;
+		overflow-x: auto;
+	}
+
+	:global(a) {
+		color: var(--text-color);
+	}
+
+	:global(a):hover {
+		color: var(--subtext-color);
+	}
+
+	:global(blockquote) {
+		margin: 1em 0;
+		text-align: left;
+		padding: 1px 20px;
+		background-color: var(--soft-background);
+	}
+</style>

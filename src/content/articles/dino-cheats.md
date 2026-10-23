@@ -1,6 +1,6 @@
 ---
-title: "voi"
-description: "chao mng"
+title: "Dino cheats"
+description: "chrome://dino"
 ---
 
 ## 1. God Mode
@@ -40,7 +40,9 @@ window.__dinoRemoveObstaclesTimer = setInterval(() => {
 }, 30);
 ```
 
-## 6. Autoplay bot (from [Auto-play the Chrome Dino Game with JavaScript](https://mathewsachin.github.io/blog/2026/03/14/chrome-dino-autoplay.html))
+## 6. Autoplay bot
+
+> From [Auto-play the Chrome Dino Game with JavaScript](https://mathewsachin.github.io/blog/2026/03/14/chrome-dino-autoplay.html)
 
 ```js
 (() => {
@@ -124,4 +126,4 @@ Runner.getInstance().invert(true);
 Runner.getInstance().invert(false);
 ```
 
-https://greasyfork.org/en/scripts/540309-chrome-dino-mod-menu-15-3/code
+> https://greasyfork.org/en/scripts/540309-chrome-dino-mod-menu-15-3/code
