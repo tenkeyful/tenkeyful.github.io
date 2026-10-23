@@ -199,7 +199,7 @@ Tasks and improvements to revisit as the site develops.
 
 ### Technical cleanup
 
-- [ ] Inspect unused Astro starter files and remove those that are no longer needed.
+- [ ] check for unnecessary npm dependencies
 - [ ] Replace the default Astro favicon in `public/`.
 - [ ] Review page titles, meta descriptions, and social sharing previews.
 - [ ] Test the site at narrow screen widths.
