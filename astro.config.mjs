@@ -5,7 +5,7 @@ import { rehypeGithubAlerts } from "rehype-github-alerts";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://tenkeyful.github.io",
+	site: "https://bienpensant.com",
 	markdown: {
 		syntaxHighlight: "shiki",
 		shikiConfig: {
