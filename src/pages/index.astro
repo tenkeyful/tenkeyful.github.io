@@ -28,6 +28,7 @@ const articles = await getCollection("articles");
 							<li>
 								<span class="ol-number">{String(i + 1).padStart(2, "0")}</span>
 								<a href={`/articles/${essay.id}/`}>{essay.data.title}</a>
+								<span>{essay.data.description}</span>
 							</li>
 						))
 					}
@@ -54,11 +55,13 @@ const articles = await getCollection("articles");
 				<a
 					href="mailto:contact@bienpensant.com"
 					aria-label="Contact by email"
-					style="color: var(--text-color); font-size: 24px; text-decoration: none;"
+					style="color: var(--text-color); font-size: 24px; text-decoration: none"
 				>
-					@ <span style="font-size: 11px;"
-						>(i can only receive emails as of Oct 2026)</span
+					@ <span
+						style="font-family: monospace; font-size: 10px; color: var(--subtext-color);"
 					>
+						(i can only receive emails as of Oct 2026)
+					</span>
 				</a>
 			</div>
 
@@ -127,7 +130,7 @@ const articles = await getCollection("articles");
 	li {
 		display: flex;
 		align-items: center;
-		gap: 18px;
+		gap: 15px;
 		padding: 20px 0;
 		border-bottom: 1px dashed var(--subtext-color);
 		color: var(--subtext-color);
@@ -143,6 +146,14 @@ const articles = await getCollection("articles");
 
 	li a:hover {
 		color: var(--subtext-color);
+	}
+
+	li span {
+		margin-left: auto;
+		font-family: monospace;
+		font-size: 13px;
+		color: var(--subtext-color);
+		text-align: right;
 	}
 
 	/* Footer */

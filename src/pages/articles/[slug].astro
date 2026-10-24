@@ -25,6 +25,7 @@ const { Content } = await render(article);
 	<body>
 		<header>
 			<a href="/" class="header-logo">bien pensant</a>
+			<img src="/public/favicon.png" width="25" />
 		</header>
 
 		<main>
@@ -32,7 +33,7 @@ const { Content } = await render(article);
 				<div id="article-title">{article.data.title}</div>
 				<div id="article-description">{article.data.description}</div>
 			</section>
-			<hr />
+			<div style="margin: 20px 0; border-bottom: 1px dashed"></div>
 			<Content />
 		</main>
 	</body>
@@ -61,16 +62,19 @@ const { Content } = await render(article);
 	}
 
 	/* Header */
-	.header-logo {
+	header {
 		display: flex;
-		justify-content: center;
-		color: inherit;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	header a {
 		font-family: Georgia, "Times New Roman", serif;
 		font-size: 24px;
 		text-decoration: none;
 	}
 
-	.header-logo:hover {
+	header a:hover {
 		color: var(--subtext-color);
 	}
 
@@ -108,6 +112,7 @@ const { Content } = await render(article);
 
 	:global(h1, h2, h3, h4, h5, h6) {
 		font-weight: normal;
+		margin: 10px 0;
 	}
 
 	:global(a) {
