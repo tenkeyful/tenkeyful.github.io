@@ -40,6 +40,7 @@ const { Content } = await render(article);
 <style>
 	/* Body */
 	:root {
+		--background: #ffffff;
 		--soft-background: #f6f8fa;
 		--text-color: #000000;
 		--subtext-color: #808080;
@@ -48,14 +49,14 @@ const { Content } = await render(article);
 
 	::selection {
 		background: var(--text-color);
-		color: #ffffff;
+		color: var(--background);
 	}
 
 	body {
-		margin: 0;
+		margin: 0px;
 		padding: 50px 5%;
 		color: var(--text-color);
-		font-family: Segoe UI;
+		font-family: "Segoe UI", system-ui;
 	}
 
 	/* Header */
@@ -98,12 +99,14 @@ const { Content } = await render(article);
 		color: var(--subtext-color);
 	}
 
-	:global(pre.astro-code) {
-		background-color: var(--soft-background) !important;
-		border: 1px solid var(--soft-background);
-		border-radius: 6px;
-		padding: 16px;
-		overflow-x: auto;
+	/* Markdown configuration */
+	:global(::selection) {
+		background: var(--text-color);
+		color: var(--background);
+	}
+
+	:global(h1, h2, h3, h4, h5, h6) {
+		font-weight: normal;
 	}
 
 	:global(a) {
@@ -114,10 +117,75 @@ const { Content } = await render(article);
 		color: var(--subtext-color);
 	}
 
+	:global(a):visited {
+		color: var(--subtext-color);
+	}
+
+	:global(table) {
+		border-collapse: collapse;
+	}
+
+	:global(th),
+	:global(td) {
+		border: 1px solid var(--subtext-color);
+		padding: 0.5rem 0.5rem;
+	}
+
+	:global(th) {
+		background: var(--soft-background);
+		font-weight: normal;
+	}
+
 	:global(blockquote) {
 		margin: 1em 0;
 		text-align: left;
 		padding: 1px 20px;
 		background-color: var(--soft-background);
+	}
+
+	:global(pre.astro-code) {
+		background-color: var(--soft-background) !important;
+		border: 1px solid var(--soft-background);
+		border-radius: 6px;
+		padding: 16px;
+		overflow-x: auto;
+	}
+
+	:global(.markdown-alert) {
+		margin: 1em 0;
+		padding: 0em 1em;
+		border-left: 4px solid var(--alert-color);
+	}
+
+	:global(.markdown-alert-title) {
+		display: flex;
+		align-items: center;
+		gap: 0.5em;
+		color: var(--alert-color);
+		margin-bottom: -10px;
+	}
+
+	:global(.markdown-alert svg.octicon) {
+		fill: var(--alert-color);
+	}
+
+	:global(.markdown-alert-note) {
+		--alert-color: #58a6ff;
+	}
+
+	:global(.markdown-alert-tip) {
+		--alert-color: #3fb950;
+	}
+
+	:global(.markdown-alert-important) {
+		--alert-color: #d2a8ff;
+	}
+
+	:global(.markdown-alert-warning) {
+		--alert-color: #d29922;
+	}
+
+	:global(.markdown-alert-caution) {
+		--alert-color: #f85149;
 	}
 </style>

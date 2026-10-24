@@ -1,6 +1,9 @@
 ---
 title: "Dino cheats"
 description: "chrome://dino"
+pubDate: Oct 22, 2026
+updatedDate: Oct 23, 2026
+category: "Technology"
 ---
 
 ## 1. God Mode
