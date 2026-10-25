@@ -59,7 +59,7 @@ Like any other projects, I first collected material and references. I use an [iP
 
 After using the app, I have what a kaomoji app would look like in mind:
 
-|   [Demo 1](/src/pages/notes/demo1.txt)    |                  Demo 2                   |
+|          [Demo 1](/notes/demo1)           |                  Demo 2                   |
 | :---------------------------------------: | :---------------------------------------: |
 | ![Demo 1](/images/kaomoji/demo/demo1.png) | ![Demo 2](/images/kaomoji/demo/demo2.jpg) |
 
@@ -82,11 +82,11 @@ I also read the literature. Here are some excellent snippets, if available:
 - [I wish emojis had never replaced emoticons](https://www.mic.com/impact/emojis-emoticons-are-similar-but-one-is-far-far-better-20514120)
   > They're making us lazier. They're making it more difficult, at least, for me to connect with others or really form connections, depending on how we communicate. As a writer, I've always appreciated communication via language and text, prizing electronic messaging over talking over the phone. I grew up on the internet and made most of my friends online through chat rooms and endless paragraphs of roleplaying. We wrote about our emotions, thoughts, and feelings rather than showing them. It was comforting. Meaning was never misconstrued, and as someone who often only had text to remember online friends by (this was an era before it was less weird to call someone up you just met on Instagram) our conversations were my only connections to the past.
 - [Emoticons can confuse LLMs, causing 'silent failures' in coding responses](https://techxplore.com/news/2026-01-emoticons-llms-silent-failures-coding.html)
-- [Think twice before you use emoticons. People from other countries might not understand you : – (](https://qz.com/1116624/scientists-prove-emoticons-are-not-universally-understood):
+- [Think twice before you use emoticons. People from other countries might not understand you : – (](https://qz.com/1116624/scientists-prove-emoticons-are-not-universally-understood)
   > For this reason, social scientists study how people respond to emoticons around the world. Much of our borderless discussion is cryptic, expressed in likes, shares, signs, and symbols. But our use of symbols as communication shortcuts assumes they’re universal—and studies show we understand emoticons differently across contexts and cultures. For example, Westerners tend to seek emotion in an emoticon’s mouth whereas Easterners seek emotion in its eyes. In other words, we don’t all see glee in this glyph : )
 - [文学研究科准教授  結城雅樹](https://lynx.let.hokudai.ac.jp/CSM/interview/09.html)
   > 日本人は集団内の調和を大事にするので、本当の気持ちが顔に表れないよう気をつけます。しかし解剖学的にみると、口元の筋肉は意志でコントロールできますが、目元の筋肉はそれができません。「笑顔だけど目は笑っていない」などといいますよね。だから、相手の本当の気持ちが知りたいとき、日本人は目を見て判断するのです。一方、本心を正直に顔に表すことが奨励される社会に住むアメリカ人は、相手の口元で感情を判断します。口角を上げて笑っているかどうか、目元よりも大きく動く口に着目していると考えられます。この違いは、電子メールの「顔文字」にも表れています。日本の顔文字は主に目の部分で笑い、涙、驚きなどを表すのに対し、アメリカの顔文字は主に口で感情を表しています。
-- [Are Emoticons the Future of Language? | Off Book | PBS Digital Studios (PBSoffbook)](https://www.youtube.com/watch?v=8tWZ2JmFpx0):
+- [Are Emoticons the Future of Language? | Off Book | PBS Digital Studios (PBSoffbook)](https://www.youtube.com/watch?v=8tWZ2JmFpx0)
   > Humans have always been interested in exploring emotion through some new kind of typography. [...] Traditionally, writing wasn't really supposed to reflect our usual give and take that we have in a conversation. [...] But people always put down a new form of communication as soon as it arrives. When Plato talks about writing, he talks about it as a supplement to speech, and I think the way some people now talk about emoticons is that they're just a supplement, they're just an add onto the more important way of communicating. But these new forms of communication are much more than mere supplements. They're going to give us new ways of thinking, and that through a combination of words and images, it might be possible to say more.
 
 | ![](/images/kaomoji/PBSoffbook/abe_lincoln.png)         | ![](/images/kaomoji/PBSoffbook/amazed.png)              | ![](/images/kaomoji/PBSoffbook/annoyed_or_rhetorical.png) | ![](/images/kaomoji/PBSoffbook/apologize.png)             |

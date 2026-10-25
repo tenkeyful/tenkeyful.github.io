@@ -5,3 +5,5 @@ pubDate: Oct 25, 2026
 updatedDate: Oct 25, 2026
 category: "Technology"
 ---
+
+Fair question.

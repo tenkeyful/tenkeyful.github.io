@@ -1,3 +1,12 @@
+---
+title: "Kaomoji"
+description: "Demo 1"
+pubDate: Oct 25, 2026
+updatedDate: Oct 25, 2026
+category: "Technology"
+---
+
+**im too lazy to format this shit**
 Recent ◴
 Favorite ★
 Emotion ☺
@@ -5,6 +14,8 @@ Action 𖨆
 Object ⛹
 Character 𓃠
 Aesthetic ✿
+
+---
 
 FOOD & DRINK
 (　’ω’)旦~~
@@ -25,6 +36,8 @@ FOOD & DRINK
 c[*]
 <[_]
 
+---
+
 WEAPON
 (ﾒ` ﾛ ´)︻デ═一
 ( ´-ω･)︻┻┳══━一
@@ -35,6 +48,8 @@ WEAPON
 ((( (((((●～\*
 -════════ι▬▬ﺤ
 cxxx{}:::::::::::::::::::::::::::>
+
+---
 
 SPORT
 ヽ(^o^)ρ┳┻┳°σ(^o^)ノ
