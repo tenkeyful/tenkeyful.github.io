@@ -177,6 +177,19 @@ Do not manually upload the `dist/` folder. The workflow handles the build and de
 - Reproduce build errors locally with `npm run build`.
 - Fix the issue, commit the changes, and push again.
 
+| Type | When to use | Example |
+|---|---|---|
+| `feat` | Add a new feature or capability. | `feat: add user registration` |
+| `fix` | Fix a bug or incorrect behavior. | `fix: handle expired access tokens` |
+| `docs` | Add or update documentation. | `docs: update installation guide` |
+| `style` | Change formatting without affecting code behavior. | `style: format code with prettier` |
+| `refactor` | Improve code structure without changing external behavior. | `refactor: extract validation logic` |
+| `perf` | Improve performance or efficiency. | `perf: optimize database queries` |
+| `test` | Add, update, or fix tests. | `test: add login service tests` |
+| `build` | Change build tools, dependencies, or packaging. | `build: upgrade vite to v7` |
+| `ci` | Change CI/CD pipelines or automation. | `ci: add lint check to github actions` |
+| `chore` | Perform routine maintenance that doesn't fit other types. | `chore: add editorconfig file` |
+
 ## TODO
 
 Tasks and improvements to revisit as the site develops.
