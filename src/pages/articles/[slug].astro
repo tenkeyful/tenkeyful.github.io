@@ -25,7 +25,7 @@ const { Content } = await render(article);
 	<body>
 		<header>
 			<a href="/" class="header-logo">bien pensant</a>
-			<img src="/public/favicon.png" width="25" />
+			<img src="/favicon.png" width="25" />
 		</header>
 
 		<main>
@@ -72,6 +72,7 @@ const { Content } = await render(article);
 		font-family: Georgia, "Times New Roman", serif;
 		font-size: 24px;
 		text-decoration: none;
+		min-height: 42px;
 	}
 
 	header a:hover {
@@ -82,7 +83,7 @@ const { Content } = await render(article);
 	main {
 		max-width: 750px;
 		margin: 50px auto;
-		line-height: 1.75;
+		line-height: 1.65;
 	}
 
 	section {
@@ -125,6 +126,12 @@ const { Content } = await render(article);
 
 	:global(a):visited {
 		color: var(--subtext-color);
+	}
+
+	:global(img) {
+		display: block;
+		max-width: 100%;
+		/* margin: 1rem auto; */
 	}
 
 	:global(table) {

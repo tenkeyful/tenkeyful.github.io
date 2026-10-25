@@ -60,12 +60,12 @@ const articles = await getCollection("articles");
 					@ <span
 						style="font-family: monospace; font-size: 10px; color: var(--subtext-color);"
 					>
-						(i can only receive emails as of Oct 2026)
+						(i can only receive emails)
 					</span>
 				</a>
 			</div>
 
-			<a href="">
+			<a href="/src/pages/notes/why.md">
 				<p>Why an old-school blog?</p>
 			</a>
 		</footer>
@@ -78,6 +78,11 @@ const articles = await getCollection("articles");
 		--text-color: #000000;
 		--subtext-color: #808080;
 		--accent: AccentColor;
+	}
+
+	html {
+		/* added so header a is stable when clicking in/out of articles */
+		scrollbar-gutter: stable;
 	}
 
 	::selection {
@@ -105,14 +110,15 @@ const articles = await getCollection("articles");
 		align-items: center;
 	}
 
-	.header-logo {
+	header a {
 		color: var(--text-color);
 		font-family: Georgia, "Times New Roman", serif;
 		font-size: 24px;
 		text-decoration: none;
+		min-height: 42px; /* added so header a is stable when clicking in/out of articles */
 	}
 
-	.header-logo:hover {
+	header a:hover {
 		color: var(--subtext-color);
 	}
 
