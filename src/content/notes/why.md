@@ -23,13 +23,13 @@ I used to run a Facebook page sharing word formation exercises (iykyk) back when
 
 Drawing on that experience, I realized that I didn't want any platform, not just Facebook, to dictate where my ideas could be found or how they were presented. So I created this blog. I hope (maybe) this endeavor is a continuation of my labor of love in high school.
 
-Even though its name is <a href="#" onclick="new Audio('https://ssl.gstatic.com/dictionary/static/sounds/20250617/bien_pensant--1_us_2.mp3').play(); return false;">*bien pensant*</a>, which a quick Google search says:
+Even though its name is <a href="pronunciation" onclick="new Audio('https://ssl.gstatic.com/dictionary/static/sounds/20250617/bien_pensant--1_us_2.mp3').play(); return false;">*bien pensant*</a>, which a quick Google search says:
 > Bien-pensant (or bien pensant) is a French borrowing meaning "well-thinking" or "right-minded".
 
-its ethos resists convention and mainstream thinking. Perhaps there's a certain irony in that. I want this to be a place where my ideas can exist on their own terms, without having to conform to the conventions of the platforms on which they're shared.
+its ethos resists convention. Perhaps there's a certain irony in that. I want this to be a place where my ideas clash with mainstream thinking.
 
 I strongly believe that **words speak for themselves**, so the design is deliberately restrained: no oversized title and description, elaborate navigation buttons, or hero images competing for attention. I want the presentation to serve the ideas, not overshadow them.
 
 This blog is not only an expression of my philosophy of words, it also brings me closer to the words themselves, through both ideas and code.
 
-I guess this should explain <span style="font-family: Georgia">Why an old-school blog?</span>
+I guess this should explain <span style="font-family: Georgia; font-size: 15px">Why an old-school blog?</span>
