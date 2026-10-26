@@ -12,19 +12,20 @@ const { title, description } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content={description} />
+		<link rel="icon" type="image/png" href="/favicon.png" />
 		<title>{title} - bien pensant</title>
 	</head>
 
 	<body>
 		<header>
-			<a href="/" class="header-logo">bien pensant</a>
+			<div class="header-logo">bien pensant</div>
 			<img src="/favicon.png" width="25" alt="" />
 		</header>
 
 		<main>
 			<section>
-				<div id="article-title">{title}</div>
-				<div id="article-description">{description}</div>
+				<a href="/" style="text-decoration: none;">{title}</a>
+				<div>{description}</div>
 			</section>
 
 			<div class="divider"></div>
@@ -39,7 +40,7 @@ const { title, description } = Astro.props;
 		--soft-background: #f6f8fa;
 		--text-color: #000000;
 		--subtext-color: #808080;
-		--accent: AccentColor;
+		--accent: AccentColor; /* unused for now, idk what to do with it */
 	}
 
 	html {
@@ -64,7 +65,7 @@ const { title, description } = Astro.props;
 		align-items: center;
 	}
 
-	header a {
+	header div {
 		color: var(--text-color);
 		font-family: Georgia, "Times New Roman", serif;
 		font-size: 24px;
@@ -72,14 +73,14 @@ const { title, description } = Astro.props;
 		min-height: 42px;
 	}
 
-	header a:hover {
+	header div:hover {
 		color: var(--subtext-color);
 	}
 
 	main {
 		max-width: 750px;
 		margin: 50px auto;
-		line-height: 1.65;
+		line-height: 1.7;
 	}
 
 	section {
@@ -89,13 +90,17 @@ const { title, description } = Astro.props;
 		gap: 0;
 	}
 
-	#article-title {
+	section a {
 		font-family: Georgia, "Times New Roman", serif;
 		font-size: 15px;
 		color: var(--text-color);
 	}
 
-	#article-description {
+	section a:hover {
+		color: var(--subtext-color);
+	}
+
+	section div {
 		font-family: monospace;
 		font-size: 13px;
 		color: var(--subtext-color);
@@ -107,6 +112,7 @@ const { title, description } = Astro.props;
 	}
 
 	:global(h1, h2, h3, h4, h5, h6) {
+		position: relative;
 		font-weight: normal;
 		margin: 10px 0;
 	}
@@ -191,5 +197,48 @@ const { title, description } = Astro.props;
 
 	:global(.markdown-alert-caution) {
 		--alert-color: #f85149;
+	}
+
+	:global(a img) {
+		display: inline;
+		margin: 0 0.25em 0 0;
+		vertical-align: -0.1em;
+		border-radius: 2px;
+	}
+
+	:global(iframe) {
+		display: block;
+		width: 100%;
+		max-width: 100%;
+		aspect-ratio: 16 / 9;
+		height: auto;
+	}
+
+	:global(.heading-anchor) {
+		position: absolute;
+		left: -1em;
+		top: 0.5em;
+
+		color: var(--subtext-color);
+
+		opacity: 0;
+		transition:
+			opacity 150ms ease,
+			visibility 0s linear 150ms;
+	}
+
+	:global(.heading-anchor svg) {
+		display: block;
+		width: 0.8em;
+		heighs: 0.8em;
+	}
+
+	:global(h1:hover .heading-anchor),
+	:global(h2:hover .heading-anchor),
+	:global(h3:hover .heading-anchor),
+	:global(h4:hover .heading-anchor),
+	:global(h5:hover .heading-anchor),
+	:global(h6:hover .heading-anchor) {
+		opacity: 1;
 	}
 </style>

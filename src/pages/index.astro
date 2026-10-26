@@ -9,13 +9,14 @@ const articles = await getCollection("articles");
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="my cringey blog" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
 		<title>bien pensant</title>
 	</head>
 
 	<body>
 		<!-- Header -->
 		<header>
-			<a href="/" class="header-logo">bien pensant</a>
+			<div class="header-logo">bien pensant</div>
 			<p>my cringey blog</p>
 		</header>
 
@@ -60,7 +61,7 @@ const articles = await getCollection("articles");
 					@ <span
 						style="font-family: monospace; font-size: 10px; color: var(--subtext-color);"
 					>
-						(i can only receive emails)
+						I can only receive emails :(
 					</span>
 				</a>
 			</div>
@@ -77,7 +78,6 @@ const articles = await getCollection("articles");
 	:root {
 		--text-color: #000000;
 		--subtext-color: #808080;
-		--accent: AccentColor;
 	}
 
 	html {
@@ -110,7 +110,7 @@ const articles = await getCollection("articles");
 		align-items: center;
 	}
 
-	header a {
+	header div {
 		color: var(--text-color);
 		font-family: Georgia, "Times New Roman", serif;
 		font-size: 24px;
@@ -118,7 +118,7 @@ const articles = await getCollection("articles");
 		min-height: 42px; /* added so header a is stable when clicking in/out of articles */
 	}
 
-	header a:hover {
+	header div:hover {
 		color: var(--subtext-color);
 	}
 
