@@ -1,16 +1,16 @@
-#### Overview
+### Overview
 
 _bien pensant_ is my cringey blog built with Astro. It uses Markdown for writing and Astro components for rendering pages. Its stack is sorta simple:
 
 - Astro
-- Markdown
+- Markdown`
 - HTML and CSS
 - TypeScript for content configuration
 - Git and GitHub
 - GitHub Pages for hosting
 - GitHub Actions for automatic deployment
 
-#### Commands
+### Commands
 
 Run commands from the project root using Terminal or VSCode.
 
@@ -19,7 +19,7 @@ Run commands from the project root using Terminal or VSCode.
 - Build the site as it will be deployed: `npm run build`
 - Preview the production build: `npm run preview`
 
-#### Writing
+### Writing
 
 - All articles live in `src/content/articles/` and each of them is a `.md`.
 - Every article must have a title and description:
@@ -38,7 +38,7 @@ start writing here
 - The homepage reads the article collection automatically, so new articles should appear in the index without manually adding their titles to `index.astro`.
 - The reusable `[slug].astro` template renders the article content. Styling changes to that template affect the reading page, not the Markdown source.
 
-#### Publishing workflow
+### Publishing workflow
 
 1. Write a new article or whatever.
 2. Test locally: `npm run dev`.
@@ -58,7 +58,7 @@ start writing here
 
 6. [Verify deployment.](https://github.com/tenkeyful/tenkeyful.github.io/actions)
 
-#### git commit message
+### git commit message
 
 | Type       | When to use                                                | Example                                |
 | ---------- | ---------------------------------------------------------- | -------------------------------------- |
@@ -73,7 +73,7 @@ start writing here
 | `ci`       | Change CI/CD pipelines or automation.                      | `ci: add lint check to github actions` |
 | `chore`    | Perform routine maintenance.                               | `chore: add editorconfig file`         |
 
-#### TODO
+### TODO
 
 - Design and presentation
   - [x] Replace the default Astro favicon with my custom one.

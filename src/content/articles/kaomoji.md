@@ -1,5 +1,5 @@
 ---
-title: "Kaomoji"
+title: "The case for kaomoji"
 description: "Making an iOS app?"
 pubDate: Dec 25, 2025
 updatedDate: Oct 25, 2026

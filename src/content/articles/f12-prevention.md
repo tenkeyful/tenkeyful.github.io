@@ -1,10 +1,12 @@
 ---
-title: "F12 prevention"
+title: "How to prevent users from inspecting page"
 description: "F12, Ctrl + Shift + I, Ctrl + U"
 pubDate: Oct 24, 2026
 updatedDate: Oct 24, 2026
 category: "Technology"
 ---
+
+> How ironic because, in this blog, I don't block page inspection.
 
 > [!IMPORTANT]
 > The level of protection is relative, because anything that runs on the client side can never be completely hidden.

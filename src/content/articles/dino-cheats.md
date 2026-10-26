@@ -1,5 +1,5 @@
 ---
-title: "Dino cheats"
+title: "List of Dino cheats"
 description: "chrome://dino"
 pubDate: Oct 22, 2026
 updatedDate: Oct 23, 2026
