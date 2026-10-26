@@ -17,9 +17,9 @@ category: "Technology"
 
 ```html
 <script>
-	document.addEventListener("contextmenu", function (e) {
-		e.preventDefault();
-	});
+  document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  });
 </script>
 ```
 
@@ -30,16 +30,16 @@ category: "Technology"
 
 ```html
 <script>
-	document.onkeydown = function (e) {
-		if (
-			e.keyCode === 123 || // F12
-			(e.ctrlKey && e.shiftKey && e.keyCode === 73) || // Ctrl + Shift + I
-			(e.ctrlKey && e.keyCode === 85) || // Ctrl + U
-			(e.ctrlKey && e.keyCode === 83) // Ctrl + S
-		) {
-			return false;
-		}
-	};
+  document.onkeydown = function (e) {
+    if (
+      e.keyCode === 123 || // F12
+      (e.ctrlKey && e.shiftKey && e.keyCode === 73) || // Ctrl + Shift + I
+      (e.ctrlKey && e.keyCode === 85) || // Ctrl + U
+      (e.ctrlKey && e.keyCode === 83) // Ctrl + S
+    ) {
+      return false;
+    }
+  };
 </script>
 ```
 
@@ -50,16 +50,16 @@ category: "Technology"
 
 ```html
 <script>
-	setInterval(function () {
-		if (
-			window.outerHeight - window.innerHeight > 100 ||
-			window.outerWidth - window.innerWidth > 100
-		) {
-			document.body.innerHTML = "";
-			alert("DevTools detected! Please close it to continue.");
-			window.location.href = "about:blank"; // or chrome://blank
-		}
-	}, 1000);
+  setInterval(function () {
+    if (
+      window.outerHeight - window.innerHeight > 100 ||
+      window.outerWidth - window.innerWidth > 100
+    ) {
+      document.body.innerHTML = "";
+      alert("DevTools detected! Please close it to continue.");
+      window.location.href = "about:blank"; // or chrome://blank
+    }
+  }, 1000);
 </script>
 ```
 
@@ -73,9 +73,9 @@ though let's be honest who tf uses iframe anyways?
 
 ```html
 <iframe
-	src="yourpage.html"
-	sandbox="allow-scripts"
-	style="border:none;width:100vw;height:100vh;"
+  src="yourpage.html"
+  sandbox="allow-scripts"
+  style="border:none;width:100vw;height:100vh;"
 ></iframe>
 ```
 

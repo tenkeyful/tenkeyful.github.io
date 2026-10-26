@@ -1,244 +1,246 @@
 ---
 interface Props {
-	title: string;
-	description: string;
+  title: string;
+  description: string;
 }
 
 const { title, description } = Astro.props;
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content={description} />
-		<link rel="icon" type="image/png" href="/favicon.png" />
-		<title>{title} - bien pensant</title>
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <title>{title} - bien pensant</title>
+  </head>
 
-	<body>
-		<header>
-			<div class="header-logo">bien pensant</div>
-			<img src="/favicon.png" width="25" alt="" />
-		</header>
+  <body>
+    <header>
+      <div class="header-logo">bien pensant</div>
+      <img src="/favicon.png" width="25" alt="" />
+    </header>
 
-		<main>
-			<section>
-				<a href="/" style="text-decoration: none;">{title}</a>
-				<div>{description}</div>
-			</section>
+    <main>
+      <section>
+        <a href="/" style="text-decoration: none;">
+          {title}
+        </a>
+        <div>{description}</div>
+      </section>
 
-			<div class="divider"></div>
-			<slot />
-		</main>
-	</body>
+      <div class="divider"></div>
+      <slot />
+    </main>
+  </body>
 </html>
 
 <style>
-	:root {
-		--background: #ffffff;
-		--soft-background: #f6f8fa;
-		--text-color: #000000;
-		--subtext-color: #808080;
-		--accent: AccentColor; /* unused for now, idk what to do with it */
-	}
+  :root {
+    --background: #ffffff;
+    --soft-background: #f6f8fa;
+    --text-color: #000000;
+    --subtext-color: #808080;
+    --accent: AccentColor; /* unused for now, idk what to do with it */
+  }
 
-	html {
-		scrollbar-gutter: stable;
-	}
+  html {
+    scrollbar-gutter: stable;
+  }
 
-	:global(::selection) {
-		background: var(--text-color);
-		color: var(--background);
-	}
+  :global(::selection) {
+    background: var(--text-color);
+    color: var(--background);
+  }
 
-	body {
-		margin: 0;
-		padding: 50px 5%;
-		color: var(--text-color);
-		font-family: "Segoe UI", system-ui;
-	}
+  body {
+    margin: 0;
+    padding: 50px 5%;
+    color: var(--text-color);
+    font-family: "Segoe UI", system-ui;
+  }
 
-	header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-	header div {
-		color: var(--text-color);
-		font-family: Georgia, "Times New Roman", serif;
-		font-size: 24px;
-		text-decoration: none;
-		min-height: 42px;
-	}
+  header div {
+    color: var(--text-color);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    text-decoration: none;
+    min-height: 42px;
+  }
 
-	header div:hover {
-		color: var(--subtext-color);
-	}
+  header div:hover {
+    color: var(--subtext-color);
+  }
 
-	main {
-		max-width: 750px;
-		margin: 50px auto;
-		line-height: 1.7;
-	}
+  main {
+    max-width: 750px;
+    margin: 50px auto;
+    line-height: 1.7;
+  }
 
-	section {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		gap: 0;
-	}
+  section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
 
-	section a {
-		font-family: Georgia, "Times New Roman", serif;
-		font-size: 15px;
-		color: var(--text-color);
-	}
+  section a {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    color: var(--text-color);
+  }
 
-	section a:hover {
-		color: var(--subtext-color);
-	}
+  section a:hover {
+    color: var(--subtext-color);
+  }
 
-	section div {
-		font-family: monospace;
-		font-size: 13px;
-		color: var(--subtext-color);
-	}
+  section div {
+    font-family: monospace;
+    font-size: 13px;
+    color: var(--subtext-color);
+  }
 
-	.divider {
-		margin: 20px 0;
-		border-bottom: 1px dashed;
-	}
+  .divider {
+    margin: 20px 0;
+    border-bottom: 1px dashed;
+  }
 
-	:global(h1, h2, h3, h4, h5, h6) {
-		position: relative;
-		font-weight: normal;
-		margin: 10px 0;
-	}
+  :global(h1, h2, h3, h4, h5, h6) {
+    position: relative;
+    font-weight: normal;
+    margin: 10px 0;
+  }
 
-	:global(a) {
-		color: var(--text-color);
-	}
+  :global(a) {
+    color: var(--text-color);
+  }
 
-	:global(a:hover),
-	:global(a:visited) {
-		color: var(--subtext-color);
-	}
+  :global(a:hover),
+  :global(a:visited) {
+    color: var(--subtext-color);
+  }
 
-	:global(img) {
-		display: block;
-		max-width: 100%;
-	}
+  :global(img) {
+    display: block;
+    max-width: 100%;
+  }
 
-	:global(table) {
-		border-collapse: collapse;
-	}
+  :global(table) {
+    border-collapse: collapse;
+  }
 
-	:global(th),
-	:global(td) {
-		border: 1px solid var(--subtext-color);
-		padding: 0.5rem;
-	}
+  :global(th),
+  :global(td) {
+    border: 1px solid var(--subtext-color);
+    padding: 0.5rem;
+  }
 
-	:global(th) {
-		background: var(--soft-background);
-		font-weight: normal;
-	}
+  :global(th) {
+    background: var(--soft-background);
+    font-weight: normal;
+  }
 
-	:global(blockquote) {
-		margin: 1em 0;
-		text-align: left;
-		padding: 1px 20px;
-		background-color: var(--soft-background);
-	}
+  :global(blockquote) {
+    margin: 1em 0;
+    text-align: left;
+    padding: 1px 20px;
+    background-color: var(--soft-background);
+  }
 
-	:global(pre.astro-code) {
-		background-color: var(--soft-background) !important;
-		border: 1px solid var(--soft-background);
-		border-radius: 6px;
-		padding: 16px;
-		overflow-x: auto;
-	}
+  :global(pre.astro-code) {
+    background-color: var(--soft-background) !important;
+    border: 1px solid var(--soft-background);
+    border-radius: 6px;
+    padding: 16px;
+    overflow-x: auto;
+  }
 
-	:global(.markdown-alert) {
-		margin: 1em 0;
-		padding: 0 1em;
-		border-left: 4px solid var(--alert-color);
-	}
+  :global(.markdown-alert) {
+    margin: 1em 0;
+    padding: 0 1em;
+    border-left: 4px solid var(--alert-color);
+  }
 
-	:global(.markdown-alert-title) {
-		display: flex;
-		align-items: center;
-		gap: 0.5em;
-		color: var(--alert-color);
-		margin-bottom: -10px;
-	}
+  :global(.markdown-alert-title) {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    color: var(--alert-color);
+    margin-bottom: -10px;
+  }
 
-	:global(.markdown-alert svg.octicon) {
-		fill: var(--alert-color);
-	}
+  :global(.markdown-alert svg.octicon) {
+    fill: var(--alert-color);
+  }
 
-	:global(.markdown-alert-note) {
-		--alert-color: #58a6ff;
-	}
+  :global(.markdown-alert-note) {
+    --alert-color: #58a6ff;
+  }
 
-	:global(.markdown-alert-tip) {
-		--alert-color: #3fb950;
-	}
+  :global(.markdown-alert-tip) {
+    --alert-color: #3fb950;
+  }
 
-	:global(.markdown-alert-important) {
-		--alert-color: #d2a8ff;
-	}
+  :global(.markdown-alert-important) {
+    --alert-color: #d2a8ff;
+  }
 
-	:global(.markdown-alert-warning) {
-		--alert-color: #d29922;
-	}
+  :global(.markdown-alert-warning) {
+    --alert-color: #d29922;
+  }
 
-	:global(.markdown-alert-caution) {
-		--alert-color: #f85149;
-	}
+  :global(.markdown-alert-caution) {
+    --alert-color: #f85149;
+  }
 
-	:global(a img) {
-		display: inline;
-		margin: 0 0.25em 0 0;
-		vertical-align: -0.1em;
-		border-radius: 2px;
-	}
+  :global(a img) {
+    display: inline;
+    margin: 0 0.25em 0 0;
+    vertical-align: -0.1em;
+    border-radius: 2px;
+  }
 
-	:global(iframe) {
-		display: block;
-		width: 100%;
-		max-width: 100%;
-		aspect-ratio: 16 / 9;
-		height: auto;
-	}
+  :global(iframe) {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
 
-	:global(.heading-anchor) {
-		position: absolute;
-		left: -1em;
-		top: 0.5em;
+  :global(.heading-anchor) {
+    position: absolute;
+    left: -1em;
+    top: 0.5em;
 
-		color: var(--subtext-color);
+    color: var(--subtext-color);
 
-		opacity: 0;
-		transition:
-			opacity 150ms ease,
-			visibility 0s linear 150ms;
-	}
+    opacity: 0;
+    transition:
+      opacity 150ms ease,
+      visibility 0s linear 150ms;
+  }
 
-	:global(.heading-anchor svg) {
-		display: block;
-		width: 0.8em;
-		heighs: 0.8em;
-	}
+  :global(.heading-anchor svg) {
+    display: block;
+    width: 0.8em;
+    heighs: 0.8em;
+  }
 
-	:global(h1:hover .heading-anchor),
-	:global(h2:hover .heading-anchor),
-	:global(h3:hover .heading-anchor),
-	:global(h4:hover .heading-anchor),
-	:global(h5:hover .heading-anchor),
-	:global(h6:hover .heading-anchor) {
-		opacity: 1;
-	}
+  :global(h1:hover .heading-anchor),
+  :global(h2:hover .heading-anchor),
+  :global(h3:hover .heading-anchor),
+  :global(h4:hover .heading-anchor),
+  :global(h5:hover .heading-anchor),
+  :global(h6:hover .heading-anchor) {
+    opacity: 1;
+  }
 </style>

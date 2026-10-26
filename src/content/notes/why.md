@@ -5,11 +5,9 @@ pubDate: Oct 25, 2026
 updatedDate: Oct 26, 2026
 category: "Philosophy"
 ---
-<audio id="pronunciation">
-  <source src="https://ssl.gstatic.com/dictionary/static/sounds/20250617/bien_pensant--1_us_2.mp3" type="audio/mpeg">
-</audio>
 
 Fair question. Before launching this blog, I asked myself a few questions:
+
 - Why do I want to share my ideas with the world?
 - `Why not social media?`
 - Do I want to use a blogging platform or create my own website?
@@ -23,10 +21,11 @@ I used to run a Facebook page sharing word formation exercises (iykyk) back when
 
 Drawing on that experience, I realized that I didn't want any platform, not just Facebook, to dictate where my ideas could be found or how they were presented. So I created this blog. I hope (maybe) this endeavor is a continuation of my labor of love in high school.
 
-Even though its name is <a href="pronunciation" onclick="new Audio('https://ssl.gstatic.com/dictionary/static/sounds/20250617/bien_pensant--1_us_2.mp3').play(); return false;">*bien pensant*</a>, which a quick Google search says:
+Even though its name is <a href="pronunciation" onclick="new Audio('https://ssl.gstatic.com/dictionary/static/sounds/20250617/bien_pensant--1_us_2.mp3').play(); return false;">_bien pensant_</a>, which a quick Google search says:
+
 > Bien-pensant (or bien pensant) is a French borrowing meaning "well-thinking" or "right-minded".
 
-its ethos resists convention. Perhaps there's a certain irony in that. I want this to be a place where my ideas clash with mainstream thinking.
+its ethos resists convention. Perhaps there's a certain irony in that. In this blog, there is no dark mode, distractions, or advertisements, and where my ideas clash with mainstream thinking.
 
 I strongly believe that **words speak for themselves**, so the design is deliberately restrained: no oversized title and description, elaborate navigation buttons, or hero images competing for attention. I want the presentation to serve the ideas, not overshadow them.
 

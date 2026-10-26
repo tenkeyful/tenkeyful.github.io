@@ -39,7 +39,7 @@ const runner = Runner.getInstance();
 clearInterval(window.__dinoRemoveObstaclesTimer);
 runner.horizon.obstacles = [];
 window.__dinoRemoveObstaclesTimer = setInterval(() => {
-	runner.horizon.obstacles = [];
+  runner.horizon.obstacles = [];
 }, 30);
 ```
 
@@ -49,62 +49,62 @@ window.__dinoRemoveObstaclesTimer = setInterval(() => {
 
 ```js
 (() => {
-	const runner = Runner.getInstance();
-	if (window.__dinoAutoPlayTimer) {
-		clearInterval(window.__dinoAutoPlayTimer);
-	}
+  const runner = Runner.getInstance();
+  if (window.__dinoAutoPlayTimer) {
+    clearInterval(window.__dinoAutoPlayTimer);
+  }
 
-	const sendKey = (type, code, keyCode) => {
-		document.dispatchEvent(
-			new KeyboardEvent(type, {
-				code,
-				keyCode,
-				which: keyCode,
-				bubbles: true,
-				cancelable: true,
-			}),
-		);
-	};
+  const sendKey = (type, code, keyCode) => {
+    document.dispatchEvent(
+      new KeyboardEvent(type, {
+        code,
+        keyCode,
+        which: keyCode,
+        bubbles: true,
+        cancelable: true,
+      }),
+    );
+  };
 
-	let lastActionAt = 0;
-	let ducking = false;
+  let lastActionAt = 0;
+  let ducking = false;
 
-	window.__dinoAutoPlayTimer = setInterval(() => {
-		if (runner.crashed || !runner.playing) return;
+  window.__dinoAutoPlayTimer = setInterval(() => {
+    if (runner.crashed || !runner.playing) return;
 
-		const obstacle = runner.horizon?.obstacles?.[0];
-		if (!obstacle) {
-			if (ducking) {
-				sendKey("keyup", "ArrowDown", 40);
-				ducking = false;
-			}
-			return;
-		}
+    const obstacle = runner.horizon?.obstacles?.[0];
+    if (!obstacle) {
+      if (ducking) {
+        sendKey("keyup", "ArrowDown", 40);
+        ducking = false;
+      }
+      return;
+    }
 
-		const canvasHeight = runner.dimensions.HEIGHT || runner.dimensions.height;
-		const trexHeight = runner.tRex.config.HEIGHT || runner.tRex.config.height;
-		const obstacleHeight = obstacle.typeConfig?.height || 0;
-		const obstacleBottom = canvasHeight - obstacle.yPos - obstacleHeight;
-		const threshold = 25 * runner.currentSpeed - obstacle.width / 2;
+    const canvasHeight = runner.dimensions.HEIGHT || runner.dimensions.height;
+    const trexHeight = runner.tRex.config.HEIGHT || runner.tRex.config.height;
+    const obstacleHeight = obstacle.typeConfig?.height || 0;
+    const obstacleBottom = canvasHeight - obstacle.yPos - obstacleHeight;
+    const threshold = 25 * runner.currentSpeed - obstacle.width / 2;
 
-		if (obstacle.xPos >= threshold || Date.now() - lastActionAt < 250) return;
+    if (obstacle.xPos >= threshold || Date.now() - lastActionAt < 250) return;
 
-		if (obstacleBottom > trexHeight) return; // High bird: keep running
+    if (obstacleBottom > trexHeight) return; // High bird: keep running
 
-		if (obstacle.yPos > canvasHeight / 2) {
-			if (ducking) {
-				sendKey("keyup", "ArrowDown", 40);
-				ducking = false;
-			}
-			sendKey("keydown", "Space", 32);
-			sendKey("keyup", "Space", 32);
-		} else {
-			sendKey("keydown", "ArrowDown", 40);
-			ducking = true;
-		}
+    if (obstacle.yPos > canvasHeight / 2) {
+      if (ducking) {
+        sendKey("keyup", "ArrowDown", 40);
+        ducking = false;
+      }
+      sendKey("keydown", "Space", 32);
+      sendKey("keyup", "Space", 32);
+    } else {
+      sendKey("keydown", "ArrowDown", 40);
+      ducking = true;
+    }
 
-		lastActionAt = Date.now();
-	}, runner.msPerFrame || 16);
+    lastActionAt = Date.now();
+  }, runner.msPerFrame || 16);
 })();
 ```
 

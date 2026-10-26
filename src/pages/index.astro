@@ -5,184 +5,181 @@ const articles = await getCollection("articles");
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="my cringey blog" />
-		<link rel="icon" type="image/png" href="/favicon.png" />
-		<title>bien pensant</title>
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="my cringey blog" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <title>bien pensant</title>
+  </head>
 
-	<body>
-		<!-- Header -->
-		<header>
-			<div class="header-logo">bien pensant</div>
-			<p>my cringey blog</p>
-		</header>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-logo">bien pensant</div>
+      <p>my cringey blog</p>
+    </header>
 
-		<!-- Main -->
-		<main>
-			<section class="articles">
-				<ol>
-					{
-						articles.map((essay, i) => (
-							<li>
-								<span class="ol-number">{String(i + 1).padStart(2, "0")}</span>
-								<a href={`/articles/${essay.id}/`}>{essay.data.title}</a>
-								<span>{essay.data.description}</span>
-							</li>
-						))
-					}
-				</ol>
-			</section>
-		</main>
+    <!-- Main -->
+    <main>
+      <section class="articles">
+        <ol>
+          {articles.map((essay, i) => (
+            <li>
+              <span class="ol-number">{String(i + 1).padStart(2, "0")}</span>
+              <a href={`/articles/${essay.id}/`}>{essay.data.title}</a>
+              <span>{essay.data.description}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
+    </main>
 
-		<!-- Footer -->
-		<footer>
-			<div class="footer-links">
-				<a
-					href="https://github.com/tenkeyful"
-					target="_blank"
-					rel="noopener noreferrer"
-					aria-label="GitHub"
-				>
-					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-						alt=""
-						class="contact"
-					/>
-				</a>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-links">
+        <a
+          href="https://github.com/tenkeyful"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+            alt=""
+            class="contact"
+          />
+        </a>
 
-				<a
-					href="mailto:contact@bienpensant.com"
-					aria-label="Contact by email"
-					style="color: var(--text-color); font-size: 24px; text-decoration: none"
-				>
-					@ <span
-						style="font-family: monospace; font-size: 10px; color: var(--subtext-color);"
-					>
-						I can only receive emails :(
-					</span>
-				</a>
-			</div>
+        <a
+          href="mailto:contact@bienpensant.com"
+          aria-label="Contact by email"
+          style="color: var(--text-color); font-size: 24px; text-decoration: none"
+        >
+          @{" "}
+          <span style="font-family: monospace; font-size: 10px; color: var(--subtext-color);">
+            I can only receive emails :(
+          </span>
+        </a>
+      </div>
 
-			<a href="/notes/why" style="color: var(--subtext-color);">
-				<p>Why an old-school blog?</p>
-			</a>
-		</footer>
-	</body>
+      <a href="/notes/why" style="color: var(--subtext-color);">
+        <p>Why an old-school blog?</p>
+      </a>
+    </footer>
+  </body>
 </html>
 
 <style>
-	/* Body */
-	:root {
-		--text-color: #000000;
-		--subtext-color: #808080;
-	}
+  /* Body */
+  :root {
+    --text-color: #000000;
+    --subtext-color: #808080;
+  }
 
-	html {
-		/* added so header a is stable when clicking in/out of articles */
-		scrollbar-gutter: stable;
-	}
+  html {
+    /* added so header a is stable when clicking in/out of articles */
+    scrollbar-gutter: stable;
+  }
 
-	::selection {
-		background: var(--text-color);
-		color: #ffffff;
-	}
+  ::selection {
+    background: var(--text-color);
+    color: #ffffff;
+  }
 
-	body {
-		margin: 0;
-		padding: 50px 5%;
-		color: var(--text-color);
-	}
+  body {
+    margin: 0;
+    padding: 50px 5%;
+    color: var(--text-color);
+  }
 
-	/* Subtext */
-	p {
-		font-family: monospace;
-		font-size: 13px;
-		color: var(--subtext-color);
-	}
+  /* Subtext */
+  p {
+    font-family: monospace;
+    font-size: 13px;
+    color: var(--subtext-color);
+  }
 
-	/* Header */
-	header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-	header div {
-		color: var(--text-color);
-		font-family: Georgia, "Times New Roman", serif;
-		font-size: 24px;
-		text-decoration: none;
-		min-height: 42px; /* added so header a is stable when clicking in/out of articles */
-	}
+  header div {
+    color: var(--text-color);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    text-decoration: none;
+    min-height: 42px; /* added so header a is stable when clicking in/out of articles */
+  }
 
-	header div:hover {
-		color: var(--subtext-color);
-	}
+  header div:hover {
+    color: var(--subtext-color);
+  }
 
-	/* Articles */
-	ol {
-		padding: 0;
-		list-style: none;
-	}
+  /* Articles */
+  ol {
+    padding: 0;
+    list-style: none;
+  }
 
-	.ol-number {
-		font-family: monospace;
-		letter-spacing: 1px;
-	}
+  .ol-number {
+    font-family: monospace;
+    letter-spacing: 1px;
+  }
 
-	li {
-		display: flex;
-		align-items: center;
-		gap: 15px;
-		padding: 20px 0;
-		border-bottom: 1px dashed var(--subtext-color);
-		color: var(--subtext-color);
-	}
+  li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    border-bottom: 1px dashed var(--subtext-color);
+    color: var(--subtext-color);
+  }
 
-	li a {
-		flex: 1;
-		font-family: Georgia, "Times New Roman", serif;
-		font-size: 15px;
-		color: var(--text-color);
-		text-decoration: none;
-	}
+  li a {
+    flex: 1;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    color: var(--text-color);
+    text-decoration: none;
+  }
 
-	li a:hover {
-		color: var(--subtext-color);
-	}
+  li a:hover {
+    color: var(--subtext-color);
+  }
 
-	li span {
-		margin-left: auto;
-		font-family: monospace;
-		font-size: 13px;
-		color: var(--subtext-color);
-		text-align: right;
-	}
+  li span {
+    margin-left: auto;
+    font-family: monospace;
+    font-size: 13px;
+    color: var(--subtext-color);
+    text-align: right;
+  }
 
-	/* Footer */
-	footer {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding-top: 25px;
-	}
+  /* Footer */
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+  }
 
-	.footer-links {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-	}
+  .footer-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 
-	.footer-links a:hover {
-		opacity: 0.5;
-	}
+  .footer-links a:hover {
+    opacity: 0.5;
+  }
 
-	.contact {
-		display: block;
-		width: 25px;
-		height: 25px;
-	}
+  .contact {
+    display: block;
+    width: 25px;
+    height: 25px;
+  }
 </style>
