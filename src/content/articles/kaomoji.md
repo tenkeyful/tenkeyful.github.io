@@ -1,6 +1,6 @@
 ---
 title: "The case for kaomoji"
-description: "Making an iOS app?"
+description: "ヾ(^_^)"
 pubDate: Dec 25, 2025
 updatedDate: Oct 25, 2026
 category: "Technology"

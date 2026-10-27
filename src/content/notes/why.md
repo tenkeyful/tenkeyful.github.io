@@ -21,11 +21,11 @@ I used to run a Facebook page sharing word formation exercises (iykyk) back when
 
 Drawing on that experience, I realized that I didn't want any platform, not just Facebook, to dictate where my ideas could be found or how they were presented. So I created this blog. I hope (maybe) this endeavor is a continuation of my labor of love in high school.
 
-Even though its name is <a href="pronunciation" onclick="new Audio('https://ssl.gstatic.com/dictionary/static/sounds/20250617/bien_pensant--1_us_2.mp3').play(); return false;">_bien pensant_</a>, which a quick Google search says:
+Even though its name is <a style="text-decoration: underline; cursor: pointer;" onclick="new Audio('https://ssl.gstatic.com/dictionary/static/sounds/20250617/bien_pensant--1_us_2.mp3').play(); return false;">_bien pensant_</a>, which a quick Google search says:
 
 > Bien-pensant (or bien pensant) is a French borrowing meaning "well-thinking" or "right-minded".
 
-its ethos resists convention. Perhaps there's a certain irony in that. In this blog, there is no dark mode, distractions, or advertisements, and where my ideas clash with mainstream thinking.
+its ethos resists convention. Perhaps there's a certain irony in that. Most blogs resists the noctural phenonemon, including this, so there is no dark mode. If you want it badly, use [Dark Reader](https://darkreader.org/) or <abbr title="F9">toggle reader mode</abbr>.
 
 I strongly believe that **words speak for themselves**, so the design is deliberately restrained: no oversized title and description, elaborate navigation buttons, or hero images competing for attention. I want the presentation to serve the ideas, not overshadow them.
 
