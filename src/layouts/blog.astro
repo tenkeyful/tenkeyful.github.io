@@ -96,6 +96,7 @@ const { title, description } = Astro.props;
 		font-family: Georgia, "Times New Roman", serif;
 		font-size: 15px;
 		color: var(--text-color);
+		text-wrap: balance;
 	}
 
 	section a:hover {
@@ -106,6 +107,7 @@ const { title, description } = Astro.props;
 		font-family: monospace;
 		font-size: 13px;
 		color: var(--subtext-color);
+		text-wrap: balance;
 	}
 
 	.divider {
@@ -113,10 +115,15 @@ const { title, description } = Astro.props;
 		border-bottom: 1px dashed;
 	}
 
+	:global(p) {
+		text-wrap: pretty;
+	}
+
 	:global(h1, h2, h3, h4, h5, h6) {
 		position: relative;
 		font-weight: normal;
 		margin: 10px 0;
+		text-wrap: balance;
 	}
 
 	:global(a) {
