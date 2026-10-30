@@ -13,6 +13,13 @@ const { title, description } = Astro.props;
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content={description} />
 		<link rel="icon" type="image/png" href="/favicon.png" />
+		<link
+			rel="preload"
+			href="/fonts/SVN-Georgia.otf"
+			as="font"
+			type="font/otf"
+			crossorigin
+		/>
 		<title>{title} - bien pensant</title>
 	</head>
 
@@ -37,6 +44,13 @@ const { title, description } = Astro.props;
 </html>
 
 <style>
+	@font-face {
+		font-family: "Georgia VN";
+		src: url("/fonts/SVN-Georgia.otf") format("opentype");
+		font-style: normal;
+		font-display: swap;
+	}
+
 	:root {
 		--background: #ffffff;
 		--soft-background: #f6f8fa;
@@ -69,7 +83,7 @@ const { title, description } = Astro.props;
 
 	header div {
 		color: var(--text-color);
-		font-family: Georgia, "Times New Roman", serif;
+		font-family: "Georgia VN", "Times New Roman", serif;
 		font-size: 24px;
 		text-decoration: none;
 		min-height: 42px;
@@ -93,7 +107,7 @@ const { title, description } = Astro.props;
 	}
 
 	section a {
-		font-family: Georgia, "Times New Roman", serif;
+		font-family: "Georgia VN", "Times New Roman", serif;
 		font-size: 15px;
 		color: var(--text-color);
 		text-wrap: balance;
@@ -188,6 +202,27 @@ const { title, description } = Astro.props;
 		content: "]";
 	}
 
+	:global(details summary::before) {
+		content: "⬘ ";
+	}
+
+	:global(details[open] summary::before) {
+		content: "⬙ ";
+	}
+
+	:global(details) {
+		display: inline;
+		cursor: help;
+	}
+
+	:global(details summary) {
+		display: inline;
+	}
+
+	:global(details img) {
+		margin: 1em 0;
+	}
+
 	:global(.markdown-alert) {
 		margin: 1em 0;
 		padding: 0 1em;
@@ -270,9 +305,8 @@ const { title, description } = Astro.props;
 	}
 
 	:global(section.footnotes) {
-		content: "";
-		margin-top: 25px;
-		border-top: 1px solid;
+		margin-top: 20px;
+		border-top: 1px dotted;
 	}
 
 	:global(#footnote-label) {

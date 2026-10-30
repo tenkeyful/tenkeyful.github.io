@@ -10,6 +10,13 @@ const articles = await getCollection("articles");
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="my cringey blog" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
+		<link
+			rel="preload"
+			href="/fonts/SVN-Georgia.otf"
+			as="font"
+			type="font/otf"
+			crossorigin
+		/>
 		<title>bien pensant</title>
 	</head>
 
@@ -71,6 +78,15 @@ const articles = await getCollection("articles");
 </html>
 
 <style>
+	/* Font */
+	@font-face {
+		font-family: "Georgia VN";
+		src: url("/fonts/SVN-Georgia.otf") format("opentype");
+		font-weight: 400;
+		font-style: normal;
+		font-display: swap;
+	}
+
 	/* Body */
 	:root {
 		--text-color: #000000;
@@ -109,7 +125,7 @@ const articles = await getCollection("articles");
 
 	header div {
 		color: var(--text-color);
-		font-family: Georgia, "Times New Roman", serif;
+		font-family: Georgia, serif;
 		font-size: 24px;
 		text-decoration: none;
 		min-height: 42px; /* added so header a is stable when clicking in/out of articles */
@@ -141,7 +157,8 @@ const articles = await getCollection("articles");
 
 	li a {
 		flex: 1;
-		font-family: Georgia, "Times New Roman", serif;
+		font-family: "Georgia VN", serif;
+		font-synthesis: none;
 		font-size: 15px;
 		color: var(--text-color);
 		text-decoration: none;

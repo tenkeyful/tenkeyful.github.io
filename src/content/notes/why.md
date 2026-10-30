@@ -2,7 +2,7 @@
 title: "Why an old-school blog?"
 description: "Why not social media?"
 pubDate: Oct 25, 2026
-updatedDate: Oct 26, 2026
+updatedDate: Oct 29, 2026
 category: "Philosophy"
 ---
 
@@ -15,13 +15,13 @@ Fair question. Before launching this blog, I asked myself a few questions:
 
 If you're reading this, I already have my answers, though it took me years of pondering throughout high school, already sharing my ideas in social media, and a leap of faith in college to do so.
 
-If you check my GitHub profile, I go by many names, one of them literally means _**human**_ or _benevolence_ in my native language. Even though I'm a freshman majoring in IT, I have a soft spot for _linguistics_ specifically and **humanities** in general. By starting this blog, I reconnect with what I've always loved, better understand who I am, and explore what I want to do while in college and beyond it.
+If you check my GitHub profile, I go by many names, one of them literally means _**human**_ in my native language. Even though I'm a freshman majoring in IT, I have a soft spot for _linguistics_ specifically and **humanities** in general. By starting this blog, I reconnect with what I've always loved, better understand who I am, and explore what I want to do while in college and beyond it.
 
-I used to run a Facebook page sharing word formation exercises (iykyk) back when I was a _logophile_ in high school, but I shut it down. If you've ever used the platform, you know that you can't format your posts (unless you're in a group), which was a letdown for me. Because I'm Vietnamese and live in Vietnam, Facebook's the only mainstream social media I use every day.
+I used to run a Facebook page sharing word formation exercises (iykyk) back when I was a _logophile_ in high school, but I shut it down. If you've ever used the platform, you know that you can't format your posts (unless you're in a group), which was a letdown for me. In the West, Facebook's main demographics are Gen X and millennials, but in the rest of the world, every (I mean it, even Gen Alpha) generation uses it.
 
-Drawing on that experience, I realized that I didn't want any platform, not just Facebook, to dictate where my ideas could be found or how they were presented. So I created this blog. I hope (maybe) this endeavor is a continuation of my labor of love in high school.
+When I write a post on any social media platform, I'm motivated to write for the algorithm, incentivized to focus on graphics for the algorithm, inclined by the likes for the algorithm. So I created this blog, to detach myself from any arbitrary black box algorithm. I hope (maybe) this endeavor is a continuation of my labor of love in high school.
 
-Even though its name is <a style="text-decoration: underline; cursor: pointer;" onclick="new Audio('https://ssl.gstatic.com/dictionary/static/sounds/20250617/bien_pensant--1_us_2.mp3').play(); return false;">_bien pensant_</a>, which a quick Google search says:
+Even though its name is <a style="text-decoration: underline; cursor: pointer;" onclick="new Audio('https://ssl.gstatic.com/dictionary/static/sounds/20250617/bien_pensant--1_us_2.mp3').play(); return false;">🕪 _bien pensant_</a>, which a quick Google search says:
 
 > Bien-pensant (or bien pensant) is a French borrowing meaning "well-thinking" or "right-minded".
 
