@@ -3,7 +3,7 @@
 _bien pensant_ is my cringey blog built with Astro. It uses Markdown for writing and Astro components for rendering pages. Its stack is sorta simple:
 
 - Astro
-- Markdown`
+- Markdown
 - HTML and CSS
 - TypeScript for content configuration
 - Git and GitHub
