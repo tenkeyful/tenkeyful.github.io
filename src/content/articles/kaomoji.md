@@ -1,5 +1,5 @@
 ---
-title: "The case for kaomoji"
+title: "[Revised] The case for emoticon/kaomoji"
 description: "ヾ(^_^)"
 pubDate: Dec 25, 2025
 updatedDate: Oct 25, 2026
