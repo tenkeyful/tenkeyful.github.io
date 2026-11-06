@@ -10,6 +10,9 @@ const articles = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    pubDate: z.coerce.date(),
+    updatedDate: z.coerce.date(),
+    category: z.string(),
   }),
 });
 
@@ -21,9 +24,6 @@ const notes = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    pubDate: z.coerce.date().optional(),
-    updatedDate: z.coerce.date().optional(),
-    category: z.string().optional(),
   }),
 });
 

@@ -25,7 +25,9 @@ const { title, description } = Astro.props;
 
 	<body>
 		<header>
-			<div class="header-logo">bien pensant</div>
+			<div class="header-logo">
+				<kbd>λ</kbd> / <kbd>Ж</kbd> / <kbd>あ</kbd>
+			</div>
 			<img src="/favicon.png" width="25" alt="" />
 		</header>
 
@@ -37,13 +39,14 @@ const { title, description } = Astro.props;
 				<div>{description}</div>
 			</section>
 
-			<div class="divider"></div>
+			<div style="margin: 20px 0; border-bottom: 1px dashed;"></div>
 			<slot />
 		</main>
 	</body>
 </html>
 
 <style>
+	/* Font */
 	@font-face {
 		font-family: "Georgia VN";
 		src: url("/fonts/SVN-Georgia.otf") format("opentype");
@@ -51,16 +54,12 @@ const { title, description } = Astro.props;
 		font-display: swap;
 	}
 
+	/* Body */
 	:root {
 		--background: #ffffff;
 		--soft-background: #f6f8fa;
 		--text-color: #000000;
 		--subtext-color: #808080;
-		--accent: AccentColor; /* unused for now, idk what to do with it */
-	}
-
-	html {
-		scrollbar-gutter: stable;
 	}
 
 	:global(::selection) {
@@ -75,6 +74,7 @@ const { title, description } = Astro.props;
 		font-family: "Segoe UI", system-ui;
 	}
 
+	/* Header */
 	header {
 		display: flex;
 		justify-content: space-between;
@@ -89,10 +89,18 @@ const { title, description } = Astro.props;
 		min-height: 42px;
 	}
 
-	header div:hover {
-		color: var(--subtext-color);
+	kbd {
+		background: var(--text-color);
+		color: var(--background);
+		padding: 2px 2px;
+		border-radius: 3px;
+		font-size: 0.85em;
+		font-weight: bold;
+		line-height: 1;
+		display: inline-block;
 	}
 
+	/* Main */
 	main {
 		max-width: 750px;
 		margin: 50px auto;
@@ -124,11 +132,7 @@ const { title, description } = Astro.props;
 		text-wrap: balance;
 	}
 
-	.divider {
-		margin: 20px 0;
-		border-bottom: 1px dashed;
-	}
-
+	/* Markdown */
 	:global(p) {
 		text-wrap: pretty;
 	}
@@ -176,14 +180,6 @@ const { title, description } = Astro.props;
 		background-color: var(--soft-background);
 	}
 
-	:global(pre.astro-code) {
-		background-color: var(--soft-background) !important;
-		border: 1px solid var(--soft-background);
-		border-radius: 6px;
-		padding: 16px;
-		overflow-x: auto;
-	}
-
 	:global(abbr) {
 		text-decoration-style: wavy;
 		text-decoration-thickness: 0.5px;
@@ -223,6 +219,23 @@ const { title, description } = Astro.props;
 		margin: 1em 0;
 	}
 
+	:global(section.footnotes) {
+		margin-top: 20px;
+		border-top: 1px dotted;
+	}
+
+	:global(#footnote-label) {
+		display: none;
+	}
+
+	/* https://shiki.style/ */
+	:global(pre.astro-code) {
+		background-color: var(--soft-background) !important;
+		padding: 15px;
+		overflow-x: auto;
+	}
+
+	/* rehype-github-alerts */
 	:global(.markdown-alert) {
 		margin: 1em 0;
 		padding: 0 1em;
@@ -261,6 +274,7 @@ const { title, description } = Astro.props;
 		--alert-color: #f85149;
 	}
 
+	/* rehype-link-favicons */
 	:global(a img) {
 		display: inline;
 		margin: 0 0.25em 0 0;
@@ -268,6 +282,7 @@ const { title, description } = Astro.props;
 		border-radius: 2px;
 	}
 
+	/* remark-youtube */
 	:global(iframe) {
 		display: block;
 		width: 100%;
@@ -276,6 +291,7 @@ const { title, description } = Astro.props;
 		height: auto;
 	}
 
+	/* rehype-autolink-headings */
 	:global(.heading-anchor) {
 		position: absolute;
 		left: -1em;
@@ -302,14 +318,5 @@ const { title, description } = Astro.props;
 	:global(h5:hover .heading-anchor),
 	:global(h6:hover .heading-anchor) {
 		opacity: 1;
-	}
-
-	:global(section.footnotes) {
-		margin-top: 20px;
-		border-top: 1px dotted;
-	}
-
-	:global(#footnote-label) {
-		display: none;
 	}
 </style>

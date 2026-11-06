@@ -23,7 +23,22 @@ const articles = await getCollection("articles");
 	<body>
 		<!-- Header -->
 		<header>
-			<div class="header-logo">bien pensant</div>
+			<div class="header-left">
+				<span class="header-icon">🗀</span>
+
+				<div class="header-category">
+					{[
+						...new Set(
+							articles.map((essay) => essay.data.category).filter(Boolean),
+						),
+					].map((category) => (
+						<label>
+							<input type="checkbox" value={category} />
+							{category}
+						</label>
+					))}
+				</div>
+			</div>
 			<p>my cringey blog</p>
 		</header>
 
@@ -32,7 +47,7 @@ const articles = await getCollection("articles");
 			<section class="articles">
 				<ol>
 					{articles.map((essay, i) => (
-						<li>
+						<li data-category={essay.data.category}>
 							<span class="ol-number">{String(i + 1).padStart(2, "0")}</span>
 							<a href={`/articles/${essay.id}/`}>{essay.data.title}</a>
 							<span>{essay.data.description}</span>
@@ -93,11 +108,6 @@ const articles = await getCollection("articles");
 		--subtext-color: #808080;
 	}
 
-	html {
-		/* added so header a is stable when clicking in/out of articles */
-		scrollbar-gutter: stable;
-	}
-
 	::selection {
 		background: var(--text-color);
 		color: #ffffff;
@@ -123,16 +133,58 @@ const articles = await getCollection("articles");
 		align-items: center;
 	}
 
-	header div {
+	.header-left {
+		display: flex;
+		align-items: center;
+		gap: 10px;
 		color: var(--text-color);
-		font-family: Georgia, serif;
-		font-size: 24px;
-		text-decoration: none;
-		min-height: 42px; /* added so header a is stable when clicking in/out of articles */
+		cursor: help;
 	}
 
-	header div:hover {
-		color: var(--subtext-color);
+	/* Header -> Category */
+	.header-left:hover .header-category {
+		display: flex;
+	}
+
+	.header-category {
+		display: none;
+		gap: 10px;
+		padding: 10px 10px;
+		border: 1px dashed var(--subtext-color);
+	}
+
+	.header-category label {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		font-family: monospace;
+		font-size: 13px;
+		cursor: pointer;
+	}
+
+	.header-category input[type="checkbox"] {
+		accent-color: var(--text-color);
+	}
+
+	.header-icon {
+		display: inline-block;
+	}
+
+	.header-icon {
+		font-size: 0;
+	}
+
+	.header-icon::before {
+		content: "🗀";
+		font-size: 24px;
+	}
+
+	.header-left:hover .header-icon::before {
+		content: "🗁";
+	}
+
+	li[hidden] {
+		display: none;
 	}
 
 	/* Articles */
@@ -202,3 +254,24 @@ const articles = await getCollection("articles");
 		height: 25px;
 	}
 </style>
+
+<script>
+	const filters = document.querySelectorAll<HTMLInputElement>(
+		".header-category input",
+	);
+	const articles = document.querySelectorAll<HTMLLIElement>(".articles li");
+
+	filters.forEach((filter) => {
+		filter.addEventListener("change", () => {
+			const selected = Array.from(filters)
+				.filter((input) => input.checked)
+				.map((input) => input.value);
+
+			articles.forEach((article) => {
+				const category = article.dataset.category ?? "";
+
+				article.hidden = selected.length > 0 && !selected.includes(category);
+			});
+		});
+	});
+</script>

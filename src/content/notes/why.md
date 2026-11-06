@@ -21,7 +21,7 @@ I used to run a Facebook page sharing word formation exercises (iykyk) back when
 
 When I write a post on any social media platform, I'm motivated to write for the algorithm, incentivized to focus on graphics for the algorithm, inclined by the likes for the algorithm. So I created this blog, to detach myself from any arbitrary black box algorithm. I hope (maybe) this endeavor is a continuation of my labor of love in high school.
 
-Even though its name is <a style="text-decoration: underline; cursor: pointer;" onclick="new Audio('https://ssl.gstatic.com/dictionary/static/sounds/20250617/bien_pensant--1_us_2.mp3').play(); return false;">🕪 _bien pensant_</a>, which a quick Google search says:
+Even though its name is <a style="text-decoration: underline; cursor: pointer;" onclick="new Audio('https://ssl.gstatic.com/dictionary/static/sounds/20250617/bien_pensant--1_us_2.mp3').play(); return false;">🕫 _bien pensant_</a>, which a quick Google search says:
 
 > Bien-pensant (or bien pensant) is a French borrowing meaning "well-thinking" or "right-minded".
 
