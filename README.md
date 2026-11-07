@@ -81,10 +81,10 @@ start writing here
   - [ ] Fix all Markdown styling issues when Astro renders them.
 - Content and navigation
   - [ ] Decide whether articles should display publication dates.
-  - [ ] Add categories, publication dates, and sorting to homepage.
+  - [ ] Add publication dates and sorting to homepage.
 - Technicalities
   - [ ] Check for unnecessary npm dependencies.
   - [ ] Review page titles, meta descriptions, and social sharing previews.
-  - [ ] Test the site at narrow screen widths.
+  - [ ] Make blog mobile friendly, not just `@media screen`.
   - [ ] Email sending.
   - [x] Buy a domain.
