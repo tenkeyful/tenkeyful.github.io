@@ -10,4 +10,4 @@ A few days ago, I was scrolling on the YouTube homepage when this video popped u
 
 [Why You DON'T probably Need A Computer Science Degree](https://www.youtube.com/watch?v=SZ90LjoU6eA)
 
-As a
+> [Transcript]

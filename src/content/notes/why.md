@@ -3,7 +3,7 @@ title: "Why an old-school blog?"
 description: "Why not social media?"
 pubDate: Oct 25, 2026
 updatedDate: Oct 29, 2026
-category: "Philosophy"
+category: "Blog"
 ---
 
 Fair question. Before launching this blog, I asked myself a few questions:
