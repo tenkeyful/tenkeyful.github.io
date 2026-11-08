@@ -59,7 +59,7 @@ const articles = await getCollection("articles");
 
 		<!-- Footer -->
 		<footer>
-			<div class="footer-links">
+			<address>
 				<a
 					href="https://github.com/tenkeyful"
 					target="_blank"
@@ -83,7 +83,7 @@ const articles = await getCollection("articles");
 						I can only receive emails :(
 					</span>
 				</a>
-			</div>
+			</address>
 
 			<a href="/notes/why" style="color: var(--subtext-color);">
 				<p>Why an old-school blog?</p>
@@ -244,13 +244,13 @@ const articles = await getCollection("articles");
 		padding-top: 25px;
 	}
 
-	.footer-links {
+	address {
 		display: flex;
 		align-items: center;
 		gap: 10px;
 	}
 
-	.footer-links a:hover {
+	address a:hover {
 		opacity: 0.5;
 	}
 
