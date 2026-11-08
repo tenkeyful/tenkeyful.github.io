@@ -88,3 +88,20 @@ start writing here
   - [ ] Make blog mobile friendly, not just `@media screen`.
   - [ ] Email sending.
   - [x] Buy a domain.
+- Make use of HTML5
+  - [x] `<details>` + `<summary>`
+  - [ ] `<dialog>`
+  - [ ] `<fieldset>` + `<legend>`
+  - [ ] `<datalist>` + `<option>`
+  - [ ] `<code>`
+  - [x] `<kbd>` with custom CSS properties
+  - [ ] `<mark>`
+  - [x] `<abbr>`
+  - [ ] `<del>` + `<ins>`
+  - [x] `<address>`
+  - [ ] `<ruby>` + `<rt>` + `<rp>`
+  - [ ] `<small>`
+  - [ ] `<u>` with `u {text-decoration: red wavy underline;}`
+  - [ ] `<object>`
+  - [ ] `<center>`
+  - [ ] `<marquee>`
