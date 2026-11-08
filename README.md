@@ -97,7 +97,7 @@ start writing here
   - [x] `<kbd>` with custom CSS properties
   - [ ] `<mark>`
   - [x] `<abbr>`
-  - [ ] `<del>` + `<ins>`
+  - [ ] `<del>` + `<ins>` using [MDN web docs' CSS sample](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/del)
   - [x] `<address>`
   - [ ] `<ruby>` + `<rt>` + `<rp>`
   - [ ] `<small>`
