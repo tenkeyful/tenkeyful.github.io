@@ -70,8 +70,13 @@ const { title, description } = Astro.props;
 	body {
 		margin: 0;
 		padding: 50px 5%;
-		color: var(--text-color);
 		font-family: "Segoe UI", system-ui;
+		background: radial-gradient(
+			circle,
+			color-mix(in srgb, var(--background), var(--text-color) 5%),
+			color-mix(in srgb, var(--background), var(--text-color) 1%),
+			var(--background) 100%
+		);
 	}
 
 	/* Header */
