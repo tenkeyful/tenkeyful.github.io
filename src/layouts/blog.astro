@@ -224,6 +224,29 @@ const { title, description } = Astro.props;
 		margin: 1em 0;
 	}
 
+	:global(hr) {
+		position: relative;
+		height: 1px;
+		margin: 30px 0;
+		border: none;
+		overflow: visible;
+		background: linear-gradient(
+			to right,
+			var(--subtext-color) 0 calc(50% - 4rem),
+			transparent calc(50% - 4rem) calc(50% + 4rem),
+			var(--subtext-color) 0
+		);
+	}
+
+	:global(hr::after) {
+		content: "Addendum";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: var(--subtext-color);
+	}
+
 	:global(section.footnotes) {
 		margin-top: 20px;
 		border-top: 1px dotted;

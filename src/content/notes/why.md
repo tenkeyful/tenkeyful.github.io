@@ -21,7 +21,7 @@ I used to run a Facebook page sharing word formation exercises (iykyk) back when
 
 When I write a post on any social media platform, I'm motivated to write for the algorithm, incentivized to focus on graphics for the algorithm, inclined by the likes for the algorithm. So I created this blog, to detach myself from any arbitrary black box algorithm. I hope (maybe) this endeavor is a continuation of my labor of love in high school.
 
-Even though its name is <a style="text-decoration: underline; cursor: pointer;" onclick="new Audio('https://ssl.gstatic.com/dictionary/static/sounds/20250617/bien_pensant--1_us_2.mp3').play(); return false;">🕫 _bien pensant_</a>, which a quick Google search says:
+Even though its name is <a style="text-decoration: underline; cursor: pointer;" onclick="new Audio('https://ssl.gstatic.com/dictionary/static/sounds/20250617/bien_pensant--1_us_2.mp3').play(); return false;">(click to play audio) _bien pensant_</a>, which a quick Google search says:
 
 > Bien-pensant (or bien pensant) is a French borrowing meaning "well-thinking" or "right-minded".
 
@@ -30,5 +30,17 @@ its ethos resists convention. Perhaps there's a certain irony in that. Most blog
 I strongly believe that **words speak for themselves**, so the design is deliberately restrained: no oversized title and description, elaborate navigation buttons, or hero images competing for attention. I want the presentation to serve the ideas, not overshadow them.
 
 This blog is not only an expression of my philosophy of words, it also brings me closer to the words themselves, through both ideas and code.
+
+<hr>
+
+[I started a blog.....in 2024 (why you should too)](https://www.youtube.com/watch?v=dnE7c0ELEH8)
+> This book changed my life, _How to Build a Second Brain_ by Tiago Forte, and now it's forcing me to start a blog in 2024.
+> [...]
+> But hold on, why a blog? What did this book do to me? Well, after I bought it last year, it kind of wrecked me and it taught me a few things. Like **my mind is for having ideas, not holding them**, and that **we consume way too much information**. Our brains can't handle it, and **while we're surrounded by knowledge, we're often starving for wisdom**. It made me change my relationship with information, what I consume, shifting it towards the timeless and the private.
+> [...]
+> And the goal of doing all of this is to express my ideas, what I'm learning, what I find valuable. But why do that? Because **we only know what we make**, and it's only by sharing those ideas that we find out what's valuable.
+> [...]
+
+<hr>
 
 I guess this should explain <span style="font-family: Georgia; font-size: 15px">Why an old-school blog?</span>
