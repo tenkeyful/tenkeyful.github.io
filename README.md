@@ -54,7 +54,7 @@ start writing here
    git push
    ```
 
-   > If error ! [rejected] main -> main (fetch first), run git pull --rebase origin main and git push origin main.
+   > If `error ! [rejected] main -> main (fetch first)`, run `git pull --rebase origin main` and `git push origin main`.
 
 6. [Verify deployment.](https://github.com/tenkeyful/tenkeyful.github.io/actions)
 
